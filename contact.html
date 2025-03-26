@@ -19,7 +19,7 @@
             min-height: 100vh;
         }
         .header {
-            background: linear-gradient(90deg, #008000, #FF0800); /* FF1128  FF0800 */
+            background: linear-gradient(90deg, #008000, #ff0800);
             color: white;
             padding: 10px;
             display: flex;
@@ -84,10 +84,10 @@
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
         }
-            
         .gallery {
-            column-count: 3; /* Adjust for more or fewer columns */
-            column-gap: 5px;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(250px, 1fr)); /* Responsive columns */
+            gap: 10px; /* Space between images */
             padding: 10px;
             justify-content: center;
         }
@@ -95,8 +95,6 @@
         .gallery img {
             width: 100%;
             height: auto;
-            display: block; /* Prevents inline spacing issues */
-            margin: 5px;
             border-radius: 8px; /* Rounded corners */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -168,18 +166,24 @@
         .insta i:hover {
             color: #ffffff; /* Changes color on hover */
         }
-        
+        .section a {
+            color: #a0ffa0;
+            text-decoration: none;
+            margin: 0 7px;
+            transition: color 0.3s ease;
+        }
+        .section a:hover {
+            color: #757474;
+        }
         
         @media (max-width: 750px) {
-            
+            .gallery {
+                grid-template-columns: repeat(1, 1fr); /* 1 image per row on small screens */
+            }
             .nav-links {
                 display: flex;
                 gap: 10px;
                 margin-right: 10px;
-            }
-            .gallery {
-                column-count: 2;
-                
             }
         }
         @media (max-width: 700px) {
@@ -214,23 +218,13 @@
                 margin-bottom: 20px;
                 color: #a0ffa0;
             }
-            .pricing-box p {
-                font-size: 14px;
-            }
             .price {
                 font-size: 23px;
                 font-weight: bold;
             }
             .section h3 {
-                font-size: 16px;
+                font-size: 18px;
             }
-
-            .gallery {
-                column-count: 1;
-                
-            }
-
-            
         }
     </style>
 </head>
@@ -239,72 +233,25 @@
         <div class="logo-container">
             <a href="index.html">
             <img src="icon.png" alt="Penley's Paintball & Airsoft">
-            </a>     
+            </a>
             <div class="business-name">Penley's Paintball & Airsoft</div>
         </div>
         <nav class="nav-links">
-            <a href="#pricing">Pricing</a>
-            <a href="#gallery">Gallery</a>
+            <a href="index.html#pricing">Pricing</a>
+            <a href="index.html#gallery">Gallery</a>
             <a href="contact.html">Contact</a>
             <a href="https://maps.app.goo.gl/PNkEzm8uski2rNfE6" target="_blank"><i class="fas fa-map-marker-alt"></i></a>
         </nav>
     </div>
+
     <div class="container">
         <div id="pricing" class="section">
-            <h2>Pricing</h2>
-            <h3>Paintball</h3>
-            <div class="pricing-table">
-                <div class="pricing-box">
-                    <h2>Coming Soon!</h2>
-                    <p class="price">$</p>
-                    <p>Includes entry and standard equipment rental.</p>
-                </div>
-                <div class="pricing-box">
-                    <h2>Coming Soon!</h2>
-                    <p class="price">$</p>
-                    <p>Includes entry, premium gear, and extra ammo.</p>
-                </div>
-            </div>
-            <h3>Airsoft</h3>
-            <div class="pricing-table">
-                <div class="pricing-box">
-                    <h2>Coming Soon!</h2>
-                    <p class="price">$</p>
-                    <p>Includes entry and basic gear rental.</p>
-                </div>
-                <div class="pricing-box">
-                    <h2>Coming Soon!</h2>
-                    <p class="price">$</p>
-                    <p>For up to 10 players with full rentals.</p>
-                </div>
-            </div>
-        </div>
-        <div id="gallery" class="section">
-            <h2>Gallery</h2>
-            <div class="gallery">
-                <img src="images/2.jpeg">
-                <img src="images/3.jpg">
-                <img src="images/13.jpg">
-                <img src="images/8.jpeg">
-                <img src="images/5.jpg">
-
-                
-                <img src="images/4.jpg">
-                <img src="images/14.jpg">
-                <img src="images/6.jpeg">
-                <img src="images/15.jpg">
-                <img src="images/9.jpg">
-                
-
-                <img src="images/1.jpeg">
-                <img src="images/12.jpg">
-                <img src="images/7.jpeg">
-                <img src="images/10.jpg">
-                <img src="images/11.jpeg">
-             
-            </div>
+            <h2>Interested in reaching out?</h2>
+           <h4>We’d love to hear from you!</h4>
+           <h4>For any questions or to book an event, text us at<a href="sms:3302801275">330-280-1275</a></h4>
         </div>
     </div>
+    
     <div id="contact" class="footer">
         <p>
             Text us at<a href="sms:3302801275">330-280-1275</a>
