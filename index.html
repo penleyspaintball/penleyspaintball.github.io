@@ -54,35 +54,44 @@
             font-size: 15px;
             transition: color 0.3s;
         }
+
         .nav-links a:hover {
             color: #90de90;
         }
+
         .container {
             width: 80%;
             margin: auto;
             flex: 1;
         }
+        
         .section {
             background: #2a2a2a;
-            padding: 20px;
+            padding: 10px;
             margin: 20px 0;
             border-radius: 12px;
             box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
             transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+            font-weight:bold;
         }
+
         .section:hover {
             transform: translateY(-5px);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
         }
         .section h2 {
-            font-size: 30px;
+            font-size: 20px;
             margin-bottom: 20px;
             color: #a0ffa0;
         }
+        .section li {
+            margin-top:10px;
+        }
+        
         .pricing-table {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 0; /* Remove gap, manually handle spacing */
         }
             
         .gallery {
@@ -100,29 +109,106 @@
             border-radius: 8px; /* Rounded corners */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            
+        }
+        .gallery-box {
+            background: #2a2a2a;
+            padding: 10px;
+            margin: 20px 0;
+            border-radius: 12px;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+            transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+        }
+        .gallery-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+        }
+        .gallery-box h2 {
+            font-size: 22px;
+            margin-bottom: 20px;
+            color: #a0ffa0;
+        }
+        .social-table {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0; /* Remove gap, manually handle spacing */
+            padding:10px;
+        }
+        .social-box {
+            background: #2a2a2a;
+            padding: 10px;
+            margin: 15px 0;
+            flex:1;
+            border-radius: 12px;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+            transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+        }
+        .social-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+        }
+
+        .social-box h2 {
+            font-size: 22px;
+            margin-bottom: 20px;
+            color: #a0ffa0;
+        }
+        .social {
+            background: #444;
+            color: white;
+            padding: 10px;
+            margin: auto;
+            margin-top:10px;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+            height: 525px;
+            width: 350px;
+            
+        }
+        .social iframe {
+            height: 525px;
+            width: 100%;
+            
         }
 
         .gallery img:hover {
-            transform: scale(1.01);
+            transform: scale(1.02);
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7);
         }
         .pricing-box {
             background: #444;
             color: white;
+            flex:1;
             padding: 20px;
+            margin: 0 10px;
             border-radius: 12px;
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
             transition: transform 0.4s ease, box-shadow 0.4s ease;
+            font-size: 20px;
         }
         .pricing-box:hover {
             transform: scale(1.02);
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
         }
         .pricing-box h2 {
-            margin: 0 0 10px;
+            margin: 0 0 0;
         }
+        .pricing-box p {
+            margin-bottom:7px;
+        }
+        .pricing-box p.desc {
+            font-size:16px;
+            
+        }
+        .pricing-box li.desc {
+            font-size:16px;
+            margin-bottom:7px;
+            
+        }
+        
         .price {
-            font-size: 26px;
+            font-size: 18px;
             font-weight: bold;
         }
         .footer {
@@ -144,6 +230,8 @@
         .footer p {
             font-size:15px;
         }
+
+        
         
         .address a {
             font-size: 12px;
@@ -155,6 +243,7 @@
             text-decoration: none;
             font-size: 20px;
             transition: color 0.3s;
+            
         }
         .fb i:hover {
             color: #ffffff; /* Changes color on hover */
@@ -165,12 +254,46 @@
             font-size: 20px;
             transition: color 0.3s;
         }
+        
+        .alacarte-box {
+            font-size:20px;
+            margin: 15px;;
+        }
+        .table-flex {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            width:100%;
+            justify-content: center;
+            text-align: left;
+        }
+        .table-flex div {
+            margin: 0 auto;
+        }
+
+        .paintball {
+            color: #000000;
+            font-size: 22px;
+        }
         .insta i:hover {
             color: #ffffff; /* Changes color on hover */
         }
+        .logo img {
+            width: 100%;
+            max-width: 150px; /* Limit the width to 500px */
+            height: auto; /* Preserve the aspect ratio */
+        }
         
-        
-        @media (max-width: 750px) {
+        @media (max-width: 965px) {
+            .social-table {
+                flex-direction: column;
+                align-items: center;
+            }
+            .social {
+                margin-bottom: 20px; /* Add vertical spacing between boxes */ 
+            }
+        }
+        @media (max-width: 790px) {
             
             .nav-links {
                 display: flex;
@@ -181,7 +304,32 @@
                 column-count: 2;
                 
             }
+            
+            .alacarte td {
+                font-size:18px;
+            }
+            .alacarte-box td p {
+                font-size:16px;
+            }
+            .alacarte-box li {
+                font-size: 16px;;
+            }
+            .pricing-box p {
+                font-size: 18px;
+            }
+            
+            
         }
+        @media (max-width: 750px) {
+            .pricing-box p {
+                font-size: 16px;
+            }
+            
+            .pricing-box p.desc {
+                font-size:15px;
+            }
+        }
+        
         @media (max-width: 700px) {
             .business-name {
                 font-size: 18px;
@@ -189,6 +337,26 @@
                 color: #a0ffa0;
                 text-transform: uppercase;
                 letter-spacing: 1.5px;
+            }
+            .pricing-table {
+                flex-direction: column;
+                align-items: center; /* Optional: center-align the single column */
+                }
+            .pricing-table h2 {
+                font-size:20px;
+            }
+            .pricing-box {
+                width: 100%;
+                max-width: 90%;
+                margin-bottom: 20px; /* Add vertical spacing between boxes */ 
+            }
+            .social {
+                max-width: 90%;
+                margin-bottom:20px
+            }
+
+            .pricing-box:last-child {
+                margin-bottom: 0; /* Optional: remove space after last box */
             }
         }
         @media (max-width: 550px) {
@@ -209,25 +377,27 @@
                 font-size: 13px;
                 transition: color 0.3s;
             }
+
             .section h2 {
                 font-size: 20px;
-                margin-bottom: 20px;
+                
                 color: #a0ffa0;
             }
-            .pricing-box p {
-                font-size: 14px;
+            .pricing-table h2 {
+                font-size: 18px;
             }
-            .price {
-                font-size: 23px;
-                font-weight: bold;
-            }
+            
             .section h3 {
                 font-size: 16px;
             }
 
             .gallery {
                 column-count: 1;
-                
+            }
+            .logo img {
+                width: 100%;
+                max-width: 100px;
+                height: auto; /* Preserve the aspect ratio */
             }
 
             
@@ -252,58 +422,149 @@
     <div class="container">
         <div id="pricing" class="section">
             <h2>Pricing</h2>
-            <h3>Paintball</h3>
+            <div class="paintball"style="background-color: #a0ffa0; width: 100%; text-align: center; padding: 5px 0; margin-bottom: 15px; margin-top:15px; font-weight: bold; border-radius: 8px;">Paintball</div>
+            
             <div class="pricing-table">
                 <div class="pricing-box">
-                    <h2>Coming Soon!</h2>
-                    <p class="price">$</p>
-                    <p>Includes entry and standard equipment rental.</p>
+                    <h2>Full Package</h2>
+                    <p>18+ <span style="color:#a0ffa0;">$35</span> &#9472;&#9472; Under 18 <span style="color:#a0ffa0;">$30</span></p>
+                    <h2>Includes:</h2>
+                    <p class="desc">Goggles, gloves, belt, gun, gas, 500 rounds</p>
+                    <p></p>
                 </div>
+                
                 <div class="pricing-box">
-                    <h2>Coming Soon!</h2>
-                    <p class="price">$</p>
-                    <p>Includes entry, premium gear, and extra ammo.</p>
+                    <h2>BYOG Package</h2>
+                    <p>18+ <span style="color:#a0ffa0;">$30</span> &#9472;&#9472; Under 18 <span style="color:#a0ffa0;">$25</span></p>
+                    <h2>Includes:</h2>
+                    <p class="desc">Everything in full package EXCEPT GUN</p>
                 </div>
             </div>
-            <h3>Airsoft</h3>
+            <li>Only field-supplied paintballs are permitted</li>
+            
+            <div class="paintball"style="background-color: #a0ffa0; width: 100%; text-align: center; padding: 5px 0; margin-bottom: 15px;margin-top:20px; font-weight: bold; border-radius: 8px;">Airsoft</div>
             <div class="pricing-table">
                 <div class="pricing-box">
-                    <h2>Coming Soon!</h2>
-                    <p class="price">$</p>
-                    <p>Includes entry and basic gear rental.</p>
+                    <h2>Full Package</h2>
+                    <p>18+ <span style="color:#a0ffa0;">$35</span> &#9472;&#9472; Under 18 <span style="color:#a0ffa0;">$30</span></p>
+                    <h2>Includes:</h2>
+                    <p class="desc">Goggles, gloves, belt, gun, 1,000 pellets</p>
+                    <p></p>
                 </div>
+                
                 <div class="pricing-box">
-                    <h2>Coming Soon!</h2>
-                    <p class="price">$</p>
-                    <p>For up to 10 players with full rentals.</p>
+                    <h2>Admission Only</h2>
+                    <p>18+ <span style="color:#a0ffa0;">$15</span> &#9472;&#9472; Under 18 <span style="color:#a0ffa0;">$10</span></p>
+                    <li class="desc">Open Play admission is $10 for all ages</li>
+                    <h2>Includes:</h2>
+                    <p class="desc">Gloves and belt are available upon request</p>
+                    <li class="desc">Goggles are available to rent</li>
                 </div>
+                
+            </div>
+            
+            <div class="paintball"style="background-color: #a0ffa0; width: 100%; text-align: center;padding:5px 0; margin-bottom: 15px; margin-top:20px; font-weight: bold; border-radius: 8px;">A La Carte Menu</div>
+            
+                <div class="alacarte-box">
+                    <div class="table-flex">
+                        <div>
+                            <table class="alacarte"style=" border-collapse: collapse;">
+                            <tr>
+                                <td style="padding: 10px;">Gun - <span style="color:#a0ffa0;">$10</span></td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 10px;">Battery 7.4v - <span style="color:#a0ffa0;">$15</span></td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 10px;">Battery 11.1v - <span style="color:#a0ffa0;">$20</span></td>
+                            </tr>
+                        </table>
+                        </div>
+                        <div>
+                            <table class="alacarte"style="border-collapse: collapse;">
+                            <tr>
+                                <td style="padding: 10px;">Paintballs<sup style="font-size:14px;">&#40;500&#41;</sup> - <span style="color:#a0ffa0;">$20</span></td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 10px;">Smoke Bombs - <span style="color:#a0ffa0;">$6</span></td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 10px;">Gas* - SM <span style="color:#a0ffa0;">$5</span> / LG <span style="color:#a0ffa0;">$10</span></td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 10px;"><p style="margin:0px;">*HPA & CO<sub>2</sub> available</p></td>
+                            </tr>
+                        </table>
+                        </div>
+                        <div>
+                            <table class="alacarte"style="border-collapse: collapse;">
+                            <tr>
+                                <td style="padding: 10px;">.20g Pellets<sup style="font-size:14px;">&#40;1K&#41;</sup> - <span style="color:#a0ffa0;">$15</span></td>
+                            </tr>
+                            <tr>
+                               <td style="padding: 10px;">.25g Pellets<sup style="font-size:14px;">&#40;1K&#41;</sup> - <span style="color:#a0ffa0;">$20</span></td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 10px;">.30g Pellets<sup style="font-size:14px;">&#40;1K&#41;</sup> - <span style="color:#a0ffa0;">$25</span></td>
+                            </tr>
+                        </table>
+                        </div>
+                    </div>
+                    
+                    <li>Green Gas canister - <span style="color:#a0ffa0;">$15</span></li>
+
+
+                </div>
+                
+            
+
+        </div>
+        <div class="social-box">
+            <h2>Stay Up To Date</h2>
+            <div class="social-table">
+                <div class="social">
+                    <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fprofile.php%3Fid%3D100077449913803&tabs=timeline&width=350&height=550&small_header=true&adapt_container_width=false&hide_cover=false&show_facepile=true&lazy=true" loading="lazy" width="300" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                </div>
+                <div class="social">
+                    <!--facebook_pin-->
+                    <iframe
+                    
+                    src = "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid0tiBYz7S3h3EvqfuWXm4cVXRP5ntrxhB8MqkwWSHGs2Bkn5K4NYShFDVNzUebRmMPl%26id%3D100077449913803&lazy=true&show_text=true&width=300"
+
+                    loading="lazy" width="300" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                    <!--facebook_pin-->
+                </div>   
             </div>
         </div>
-        <div id="gallery" class="section">
+        <div id="gallery" class="gallery-box">
             <h2>Gallery</h2>
             <div class="gallery">
-                <img src="images/2.jpeg">
-                <img src="images/3.jpg">
-                <img src="images/13.jpg">
-                <img src="images/8.jpeg">
-                <img src="images/5.jpg">
-
+                <img src="images/2.jpeg" loading="lazy">
+                <img src="images/3.jpg" loading="lazy">
+                <img src="images/13.jpg" loading="lazy">
+                <img src="images/8.jpeg" loading="lazy">
+                <img src="images/5.jpg" loading="lazy">
                 
-                <img src="images/4.jpg">
-                <img src="images/14.jpg">
-                <img src="images/6.jpeg">
-                <img src="images/15.jpg">
-                <img src="images/9.jpg">
+                <img src="images/4.jpg" loading="lazy">
+                <img src="images/14.jpg" loading="lazy">
+                <img src="images/6.jpeg" loading="lazy">
+                <img src="images/15.jpg" loading="lazy">
+                <img src="images/9.jpg" loading="lazy">
                 
 
-                <img src="images/1.jpeg">
-                <img src="images/12.jpg">
-                <img src="images/7.jpeg">
-                <img src="images/10.jpg">
-                <img src="images/11.jpeg">
+                <img src="images/1.jpeg" loading="lazy">
+                <img src="images/12.jpg" loading="lazy">
+                <img src="images/7.jpeg" loading="lazy">
+                <img src="images/10.jpg" loading="lazy">
+                <img src="images/11.jpeg" loading="lazy">
+                
              
             </div>
         </div>
+        
+    </div>
+    <div class="logo">
+        <img src="icon.png">
     </div>
     <div id="contact" class="footer">
         <p>

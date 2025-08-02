@@ -175,6 +175,11 @@
         .section a:hover {
             color: #757474;
         }
+        .logo img {
+            width: 100%;
+            max-width: 200px; /* Limit the width to 500px */
+            height: auto; /* Preserve the aspect ratio */
+        }
         
         @media (max-width: 750px) {
             .gallery {
@@ -225,6 +230,11 @@
             .section h3 {
                 font-size: 18px;
             }
+            .logo img {
+                width: 100%;
+                max-width: 150px; /* Limit the width to 500px */
+                height: auto; /* Preserve the aspect ratio */
+            }
         }
     </style>
 </head>
@@ -250,7 +260,11 @@
            <h4>We’d love to hear from you!</h4>
            <h4>For any questions or to book an event, text us at<a href="sms:3302801275">330-280-1275</a></h4>
         </div>
+        <div class="logo">
+            <img src="icon.png">
+        </div>
     </div>
+    
     
     <div id="contact" class="footer">
         <p>
