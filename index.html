@@ -164,12 +164,10 @@
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
             height: 525px;
             width: 350px;
-            
         }
         .social iframe {
             height: 525px;
             width: 100%;
-            
         }
 
         .gallery img:hover {
@@ -358,6 +356,7 @@
             .pricing-box:last-child {
                 margin-bottom: 0; /* Optional: remove space after last box */
             }
+    
         }
         @media (max-width: 550px) {
             .business-name {
@@ -399,8 +398,31 @@
                 max-width: 100px;
                 height: auto; /* Preserve the aspect ratio */
             }
+        }
+        @media (max-width: 450px) {
+            .social iframe {
+                transform-origin: top left;
+                transform: scale(60%);
+                width:175%;
+                justify-content: center;
+            }
+            .social {
+                height:315px;
+                width: 75%;
+                justify-content: center;
+            }
+        }
 
-            
+        @media (max-width: 350px) {
+            .social iframe {
+                transform-origin: top left;
+                transform: scale(45%);
+                width:225%;
+            }
+            .social {
+                height:236.25px;
+                width: 65%;
+            }
         }
     </style>
 </head>
@@ -523,7 +545,7 @@
             <h2>Stay Up To Date</h2>
             <div class="social-table">
                 <div class="social">
-                    <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fprofile.php%3Fid%3D100077449913803&tabs=timeline&width=350&height=550&small_header=true&adapt_container_width=false&hide_cover=false&show_facepile=true&lazy=true" loading="lazy" width="300" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                    <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fprofile.php%3Fid%3D100077449913803&tabs=timeline&width=350&height=550&small_header=true&adapt_container_width=false&hide_cover=false&show_facepile=true&lazy=true" loading="lazy" width="300" style="border:none;overflow:hidden;" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
                 </div>
                 <div class="social">
                     <!--facebook_pin-->
